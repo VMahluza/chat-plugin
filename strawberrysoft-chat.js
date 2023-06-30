@@ -118,9 +118,9 @@ class ChatBot {
     constructor(custom) {
         this.hide = true;
         this.chatContainer = document.getElementById("chat-container");
-        this.chatBtn = document.getElementById(custom.id);
+        this.chatBtn = document.getElementById("chat-btn");
         this.custom = custom;
-        
+        this.chatContainer.style.display = "none";``
 
     }
     start() {
@@ -130,8 +130,7 @@ class ChatBot {
         this.chatBtn.style.left = "85vw"
         this.chatBtn.style.top = "90vh"
         this.chatBtn.style.padding = "20px 60px"
-        this.chatBtn.innerHTML = `<i class="fas fa-comment"></i> ${this.custom.btnTxt}`
-
+        this.chatBtn.innerHTML = `<i class="fas fa-comment"></i> ${this.custom.text}`
         this.chatContainer.style.opacity = 0;
         let element = this.chatContainer
         this.chatBtn.addEventListener("click", function () {
